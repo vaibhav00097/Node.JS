@@ -1,0 +1,108 @@
+   Q1:What is the difference between Java & JavaScript?
+
+-Java is considered a compiled programming language, while JavaScript is considered an interpreted scripting language
+-Java uses static type checking, and JavaScript uses dynamic typing
+-Java uses multiple threads to perform tasks in parallel, whereas JavaScripst handles concurrency on one main thread of execution
+-Java follows class based inheritance, while in JavaScript, inheritance is prototypal
+
+
+
+   Q2. What is JavaScript?
+
+-JavaScript is a scripting or programming language that allows you to implement complex things on web pages —
+every time a web page does more than just sit there and display static information for you to look at — 
+displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc.
+
+  
+   Q3. What are the data types supported by JavaScript?
+
+There are 7 primitive data types in JavaScript:
+       -Number
+       -Bigint
+       -String
+       -Boolean
+       -Null
+       -Undefined
+       -Symbol
+
+
+   Q4. What are the scopes of a variable in JavaScript?
+
+The scope of a variable is the region of your program in which it is defined. JavaScript variables have only two scopes.
+
+  -Global Variables − A global variable has global scope which means it can be defined anywhere in your JavaScript code.
+  -Local Variables − A local variable will be visible only within a function where it is defined. 
+                     Function parameters are always local to that function.
+
+
+   Q5. What is Callback?
+
+A callback is a plain JavaScript function passed to some method as an argument or option. 
+It is a function that is to be executed after another function has finished executing, hence the name ‘call back‘. 
+In JavaScript, functions are objects. Because of this, functions can take functions as arguments, and can be returned by other functions
+
+
+   Q6.What is Closure?Give an example.
+
+	Closures are created whenever a variable that is defined outside the current scope is accessed from within some inner scope.
+ It gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created. 
+To use a closure, simply define a function inside another function and expose it.
+
+	Clonsider the following code example:
+
+                            function makeFunc() {
+                            const name = 'Mozilla';
+                           function displayName() {
+                           console.log(name);
+                            }
+                           return displayName;
+                           }
+
+                          const myFunc = makeFunc();
+                          myFunc();
+
+
+
+
+   Q7. What is the difference between the operators ‘==‘ & ‘===‘?
+
+
+In one word, main difference between "==" and "===" operator is that formerly compares variable by making type correction e.g. 
+if you compare a number with a string with numeric literal, == allows that, but === doesn't allow that,
+ because it not only checks the value but also type of two variable,
+ if two variables are not of the same type "===" return false, while "==" return true. 
+
+             0==false   // true, because false is equivalent of 0
+             0===false  // false, because both operands are of different type
+             2=="2"     // true, auto type coercion, string converted into number
+             2==="2"    // false, since both operands are not of same type
+
+
+   
+   Q8.What is the difference between null & undefined?
+
+	Undefined means a variable has been declared but has not yet been assigned a value. 
+	On the other hand, null is an assignment value. It can be assigned to a variable as a representation of no value. 
+	Also, undefined and null are two distinct types: undefined is a type itself (undefined) while null is an object.
+
+   
+   Q9.What would be the result of 2+5+"3"?
+	
+	Since 2 and 5 are integers, they will be added numerically. And since 3 is a string, its concatenation will be done. 
+	So the result would be 73. The ” ” makes all the difference here and represents 3 as a string and not a number.
+
+   
+   Q10.What is the difference between call & Apply?
+      
+	The call() method calls a function with a given this value and arguments provided individually.
+	Syntax-
+	1||fun.call(thisArg[, arg1[, arg2[, ...]]])
+	
+	The apply() method calls a function with a given this value, and arguments provided as an array.
+	Syntax-
+	1||fun.apply(thisArg, [argsArray])
+
+
+
+
+

@@ -1,0 +1,28 @@
+Q1. What is Middleware in Express.js?
+
+=> In Express.js, middleware refers to a function that is executed on an incoming request before it reaches the intended route handler. Middleware can perform various tasks such as logging, authentication, and data parsing. Express.js includes a built-in middleware for handling JSON and URL-encoded form data, as well as serving static files. Additionally, third-party middleware can be added to an Express.js application to provide additional functionality. Middleware functions can also modify the request and response objects before passing them on to the next middleware function or the route handler.
+
+
+Q2. What is json web tokens?
+
+=> JSON Web Token (JWT) is a standard format for securely transmitting information between parties. JWTs are often used to authenticate users. They consist of a header, a payload, and a signature.
+
+The header typically consists of two parts: the type of the token, which is JWT, and the signing algorithm being used, such as HMAC SHA256 or RSA.
+
+The payload contains claims, which are statements about an entity (typically, the user) and additional data. Claims are encoded as a JSON object that is used as the payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption (JWE) structure, and typically contains claims like expirations, issuer, subject, audience, etc.
+
+The signature is used to verify that the sender of the JWT is who it says it is and to ensure that the message wasn't changed along the way. The signature is created by taking the encoded header, the encoded payload, a secret, the algorithm specified in the header, and signing them.
+
+JWT's are often used in authentication and authorization process, after a user is authenticated, the server will create a JWT token, and then send it to the client. The client will then include the JWT token in the header of subsequent requests to the server, allowing the server to authenticate the user on each request.
+
+
+
+Q3. What is different between encryption and hashing.
+
+=> Encryption and hashing are both techniques for protecting data, but they are used for different purposes and have some key differences.
+
+Encryption is a method of encoding data so that it can only be read by someone with the appropriate key or password. The process of encryption involves taking plaintext, applying a mathematical algorithm to it, and producing ciphertext. The ciphertext can then be decrypted using the same algorithm and the original key to reveal the original plaintext. Encryption is used to secure data in transit and at rest, and ensure the confidentiality, integrity and authenticity of the data.
+
+Hashing, on the other hand, is a one-way function that takes an input (or "message") and returns a fixed-size string of characters, which is usually a "hash" or "digest." Hashing is used to create a unique fixed-size representation of a variable-size input, and is mainly used for data integrity and authentication. Hashes are typically used for password storage, data indexing, and integrity checking.
+
+In summary, encryption is used to protect the confidentiality of data, while hashing is used to verify the integrity of data. Encryption can be reversed (decrypted) by using the appropriate key or password, while hashing is a one-way function and cannot be reversed. Also, encryption is slower process compared to hashing.
